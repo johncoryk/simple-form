@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>FCC Survey Form</title>
+  </head>
+  <body>
+    <div class="bg-info p-2 mb-5"></div>
+    <header class="text-center m-2" id="heading-info">
+      <h1 id="title">Tell Us More About You...</h1>
+      <p id="description">
+        A short survey about your experience with web development.
+      </p>
+    </header>
+
+    <div
+      class="p-5 m-3 bg-light text-dark shadow rounded w-75 mx-auto"
+      id="form-container"
+    >
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name:</label>
+          <input
+            class="form-control w-100"
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <div id="email-label" class="form-group">
+          <label for="email">Email:</label>
+          <input
+            class="form-control w-100"
+            type="email"
+            id="email"
+            name="email"
+            required
+            min="1"
+            max="40"
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <div id="years-label" class="form-group">
+          <label for="number">Number of years in web development:</label>
+          <input
+            class="form-control w-25"
+            type="number"
+            id="number"
+            name="number"
+            required
+            placeholder="0"
+          />
+        </div>
+
+        <div id="role-label" class="form-group">
+          <label>Which option best describes your current role?</label>
+          <select id="dropdown" name="role" class="form-control w-75" required>
+            <option disabled selected value>Select current role</option>
+            <option value="front-end">Front-End Developer</option>
+            <option value="back-end">Back-End Developer</option>
+            <option value="fullstack">Full Stack Developer</option>
+          </select>
+        </div>
+
+        <div id="lang-radios" class="form-group">
+          <p class="mb-1">What is your favorite programming language?</p>
+          <div>
+            <input
+              type="radio"
+              name="fav-lang"
+              value="javascript"
+              id="javascript"
+              checked
+            />
+            <label for="javascript">Javascript</label>
+          </div>
+          <div>
+            <input type="radio" name="fav-lang" value="php" id="php" />
+            <label for="php">PHP</label>
+          </div>
+          <div>
+            <input type="radio" name="fav-lang" value="python" id="python" />
+            <label for="python">Python</label>
+          </div>
+          <div>
+            <input type="radio" name="fav-lang" value="java" id="java" />
+            <label for="javascript">Java</label>
+          </div>
+          <div>
+            <input type="radio" name="fav-lang" value="c++" id="c++" />
+            <label for="c++">C++</label>
+          </div>
+        </div>
+
+        <div id="tools-checks" class="form-group">
+          <p class="mb-1">What tools are you familiar with?</p>
+          <small id="tools-small" class="form-text text-muted"
+            >Chcek all that apply.</small
+          >
+          <div>
+            <input type="checkbox" name="tools" value="html" id="html" />
+            <label for="html">HTML</label>
+          </div>
+          <div>
+            <input type="checkbox" name="tools" value="css" id="css" />
+            <label for="css">CSS</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="tools"
+              value="frameworks"
+              id="frameworks"
+            />
+            <label for="frameworks">Frameworks</label>
+          </div>
+          <div>
+            <input type="checkbox" name="tools" value="ides" id="ides" />
+            <label for="ides">IDE's</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlTextarea"
+            >What's your favorite thing you've learned about web
+            development?</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea"
+            rows="3"
+            placeholder="Talk about your favorite thing you've learned so far in web development."
+          ></textarea>
+        </div>
+
+        <input type="submit" class="btn btn-info btn-lg btn-block" />
+      </form>
+    </div>
+
+    <footer class="footer bg-info">
+      <div class="footer-text text-light">
+        This simple form was made by me,
+        <a
+          class="text-white bg-secondary"
+          href="https://github.com/johncoryk"
+          target="_blank"
+          >johncoryk</a
+        >
+        using
+        <a
+          class="text-white bg-secondary"
+          href="https://getbootstrap.com/"
+          target="_blank"
+          >Bootstrap.</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
